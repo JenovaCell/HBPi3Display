@@ -35,7 +35,7 @@ Edit `ExecStart` in `/etc/systemd/system/hbdisplay.service`, then
 
 | Symptom | Fix |
 | --- | --- |
-| Colours look wrong (blue background) | the service already passes `--swap-rb`; remove it if yours looks right without |
+| Red and blue swapped | add `--swap-rb` to `ExecStart` in the service file |
 | White screen / garbage | lower `speed=` in config.txt (e.g. `12000000`) |
 | Wrong orientation | change `rotate=` (0, 90, 180, 270) |
 | No ili9486 framebuffer | try `dtoverlay=piscreen,drm,speed=16000000,rotate=90` instead |

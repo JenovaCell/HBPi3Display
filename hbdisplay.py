@@ -168,9 +168,9 @@ def rate(bps):
 def tile(d, x, y, w, h, label, value, sub=None, bar=None, color=FG, hi=False):
     d.rectangle([x, y, x + w - 1, y + h - 1], fill=TILE_HI if hi else TILE)
     d.text((x + 6, y + 4), label, font=F_LBL, fill=DIM)
-    d.text((x + w // 2, y + 24), value, font=F_BIG, fill=color, anchor="mm")
+    d.text((x + w // 2, y + 31), value, font=F_BIG, fill=color, anchor="mm")
     if sub:
-        d.text((x + w // 2, y + 44), sub, font=F_SMALL, fill=DIM, anchor="mm")
+        d.text((x + w // 2, y + 48), sub, font=F_SMALL, fill=DIM, anchor="mm")
     if bar is not None:
         d.rectangle([x + 6, y + h - 7, x + w - 7, y + h - 4], fill=(50, 50, 58))
         fill_w = int((w - 13) * min(max(bar, 0), 100) / 100)
