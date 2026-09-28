@@ -3,7 +3,7 @@ Description=Homebridge status display (3.5" SPI TFT)
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/python3 /opt/hbdisplay/hbdisplay.py
+ExecStart=/usr/bin/python3 /opt/hbdisplay/hbdisplay.py --swap-rb
 Restart=always
 RestartSec=5
 # Needs to write /dev/fbN (group "video") and read the Homebridge log.
